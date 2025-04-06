@@ -1,5 +1,14 @@
 #kiluva
 #family>duty>honour
+# import packages
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+from xgboost import XGBRegressor
+import warnings 
 
 # Load the dataset
 sportify_charts_2025 = pd.read_csv(r'C:\Users\HP ELITEBOOK 820 G4\OneDrive\Documents\DATA ANALYSIS & VISUALIZATION\Python\spotifyProject\universal_top_spotify_songs.new.csv')

@@ -8,7 +8,7 @@ Spotify is a music streaming app used worldwide. It provides extensive song data
 
 1.2	OBJECTIVES.
 
-I am aiming to create a user-friendly system to help young artists, producers, Djs and music promoters understand what features contribute to high song popularity. The end product am targeting creating an app that can predict the popularity of a new song before it is even released as long as you have the features.
+I am aiming to understand the relationship between features and popularity singular and collectively. I also want to understand what combination of value of features contribute to high song popularity.
 
 1.3	REFRENCES.
 

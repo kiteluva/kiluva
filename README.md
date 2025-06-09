@@ -16,7 +16,11 @@ Some have done this study before. It is worth mentioning that the music industry
 
 B.	ANALYSIS.
 
-2.1 DATA CLEANING
+2.1 METHODOLOGY
+
+I aim to use R for analysis, It is an extensive deep programing language thet is very nice for data analysis. It has great packages for analysis too, among them I will use: tidyverse, corplot, randomforest, xgboost caret among others for analysis. I intend to train three models XGBoost, randomforest and GBM for the regression analysis.
+
+2.2 DATA CLEANING
 
 The data obtained from spotify api is not clean, thus not ready for analysis. 
 First, I check the characteristics of the data; is it numeric? Does it have missing values? Are there repeated songs? 

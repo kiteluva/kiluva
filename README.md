@@ -1,4 +1,4 @@
-#PREDICTING SPOTIFY’S SONGS POPULARITY, USING SONG’S FEATURES
+# spotify song popularity regression analysis
 
 A.	INTRODUCTION.
 

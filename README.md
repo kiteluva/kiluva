@@ -1,5 +1,7 @@
 PREDICTING SPOTIFY’S SONGS POPULARITY, USING SONG’S FEATURES
+
 A.	INTRODUCTION.
+
 1.1	ABOUT SPOTIFY.
 Spotify is a music streaming app used worldwide. It provides extensive song data on it’s API. I will be using this data to create a model that can be used to predict the popularity of new music.
 
@@ -10,6 +12,7 @@ I am aiming to create a user-friendly system to help young artists, producers, D
 Some have done this study before. It is worth mentioning that the music industry has grown so much. It is not a surprise as music is a critical tool in every day life. I hope to build on what most have done and improve on some that was not covered.
 
 B.	ANALYSIS.
+
 2.1 DATA CLEANING
 The data obtained from spotify api is not clean, thus not ready for analysis. 
 First, I check the characteristics of the data; is it numeric? Does it have missing values? Are there repeated songs? 
@@ -33,7 +36,7 @@ Results: from the models after running the test set, Xgboost (XGB) model had the
 I plotted graphs showing the relationship between the actual popularity score and the predicted popularity scores for all the three models.
 
 C.	CONCLUSIONS
-What I learned is even though these features account for a substantial part of popularity (0.61), there are other features not included in my dataset that contribute to popularity too. 
+What I learned is even though these features account for a substantial part of popularity (0.6), there are other features not included in my dataset that contribute to popularity too. 
 There could be ways better employed to further reduce the RMSE. This will likely tighten the grip on the relationship between features and popularity, therefore rise the Rsquared. 
 
 

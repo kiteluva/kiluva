@@ -51,7 +51,7 @@ What I learned is even though these features account for a substantial part of p
 There could be ways better employed to further reduce the RMSE. This will likely tighten the grip on the relationship between features and popularity, therefore rise the Rsquared. 
 
 
-All the results and plots in; “J-K-spotify_analysis_all_models_plots”
+All the results and plots in; “the regression codes and results.pdf”
 
 
  

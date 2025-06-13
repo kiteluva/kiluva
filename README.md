@@ -1,6 +1,6 @@
 # spotify song popularity regression analysis
 
-A.	INTRODUCTION.
+1.	INTRODUCTION.
 
 1.1	ABOUT SPOTIFY.
 
@@ -14,7 +14,7 @@ I am aiming to understand the relationship between features and popularity singu
 
 Some have done this study before. It is worth mentioning that the music industry has grown so much. It is not a surprise as music is a critical tool in every day life. I hope to build on what most have done and improve on some that was not covered.
 
-B.	ANALYSIS.
+2.	ANALYSIS.
 
 2.1 METHODOLOGY
 
@@ -38,20 +38,21 @@ I went ahead and checked the features linear correlation with popularity. I foun
 I also performed both anova and linear regression of the features and popularity to check for feature importance, I discovered, all features had a p-value less than 0.05 bar key and danceability. But since they may have other non-linear relationship to popularity I kept the features.
 There I decided to explore advanced machine learning techniques to check for complex relations.
 
-2.3 MACHINE LEARNING RERESSION
+2.3 MACHINE LEARNING REGRESSION
 
 Here I sort to employ some of the models that could capture my data best, ie Random Forest(R.F) Xgboost(XGB) and Gradient boosting machines (GBM). These models use the concepts of decision trees to make conclusions and predictions. 
 To ensure the models are trained and tested on new unseen data I split the data identically into 0.8(training) and 0.2(testing) sets on the training data. I created 5 folds on the training set that would increase the robustness of the models while learning traits of the data.
 Results: from the models after running the test set, Xgboost (XGB) model had the highest Rsquared of 0.61, followed closely by Random Forest with 0.60 and GBM with 0.59. Similarly, XGB had the least root mean squared error (RMSE), followed closely by RF and GBM with the most. 
 I plotted graphs showing the relationship between the actual popularity score and the predicted popularity scores for all the three models.
 
-C.	CONCLUSIONS
+3.	CONCLUSIONS
 
 What I learned is even though these features account for a substantial part of popularity (0.6), there are other features not included in my dataset that contribute to popularity too. 
+Here I also learnt that some features have high correlation to popularity eg market count and others have a very low absolute correlation to popularity eg tempo.
 There could be ways better employed to further reduce the RMSE. This will likely tighten the grip on the relationship between features and popularity, therefore rise the Rsquared. 
 
 
-All the results and plots in; “J-K-spotify_analysis_all_models_plots”
+All the results and plots in; “the regression codes and results.pdf”
 
 
  

@@ -71,7 +71,7 @@ columns_to_drop = [
 spotify_modelling = spotify_charts_2024.drop(columns=columns_to_drop, errors='ignore')
 
 # check for missing values
-print("\nMissing values before handling:")
+print("Missing values before handling:")
 print(spotify_modelling.isnull().sum())
 
 # Handle missing values by imputing with mean (for numerical columns)
@@ -82,7 +82,7 @@ for col in spotify_modelling.columns:
     if spotify_modelling[col].dtype in ['int64', 'float64']:
         spotify_modelling[col].fillna(spotify_modelling[col].mean(), inplace=True)
     # else: For non-numeric, you'd use fillna(spotify_modelling[col].mode()[0], inplace=True) or similar
-print("\nMissing values after handling:")
+print("Missing values after handling:")
 print(spotify_modelling.isnull().sum())
 
 # Arrange the columns - Python DataFrames maintain column order
@@ -118,7 +118,7 @@ def spotify_stats(column):
 # Loop through columns and compute statistics
 stats_results = spotify_modelling.apply(spotify_stats).T # .T for transpose to match R's output structure
 
-print("\nDescriptive Statistics:")
+print("Descriptive Statistics:")
 print(stats_results)
 
 # Start the PDF device for plots
@@ -219,7 +219,7 @@ anova_importance = pd.DataFrame(anova_results)
 anova_importance.dropna(subset=['F_Value'], inplace=True) # Remove rows where F_Value is NA
 anova_importance = anova_importance.sort_values(by='F_Value', ascending=False).reset_index(drop=True)
 
-print("\nANOVA Variance Importance (Combined):")
+print("ANOVA Variance Importance (Combined):")
 print(anova_importance)
 
 # --- Plotting ANOVA results ---
@@ -336,9 +336,9 @@ train_processed = pd.DataFrame(train_processed_array, columns=feature_names, ind
 test_processed = pd.DataFrame(test_processed_array, columns=feature_names, index=X_test.index)
 
 
-print("\nProcessed Training Data (First few rows):\n")
+print("Processed Training Data (First few rows):")
 print(train_processed.head())
-print("\nProcessed Testing Data (First few rows):\n")
+print("Processed Testing Data (First few rows):")
 print(test_processed.head())
 
 # Combine processed features with the target variable (for modeling libraries that prefer a single DataFrame)
@@ -401,7 +401,7 @@ grid_search_rf.fit(train_processed, y_train)
 rf_best_model = grid_search_rf.best_estimator_
 
 # Model results
-print("\nRandom Forest - Best Parameters:", grid_search_rf.best_params_)
+print("Random Forest - Best Parameters:", grid_search_rf.best_params_)
 print("Random Forest - Best Cross-Validation RMSE:", np.sqrt(-grid_search_rf.best_score_))
 
 ### Save RF model
@@ -426,7 +426,7 @@ importance_df_rf = pd.DataFrame({
     'Importance': rf_best_model.feature_importances_
 })
 sorted_importance_df_rf = importance_df_rf.sort_values(by='Importance', ascending=False).reset_index(drop=True)
-print("\nRandom Forest - Feature Importance:")
+print("Random Forest - Feature Importance:")
 print(sorted_importance_df_rf)
 
 # -------------------------
@@ -514,7 +514,7 @@ grid_search_gbm.fit(train_processed, y_train)
 gbm_best_model = grid_search_gbm.best_estimator_
 
 # Model results
-print("\nGBM - Best Parameters:", grid_search_gbm.best_params_)
+print("GBM - Best Parameters:", grid_search_gbm.best_params_)
 print("GBM - Best Cross-Validation RMSE:", np.sqrt(-grid_search_gbm.best_score_))
 
 ### Save GBM model
@@ -538,7 +538,7 @@ importance_df_gbm = pd.DataFrame({
     'Importance': gbm_best_model.feature_importances_
 })
 sorted_importance_df_gbm = importance_df_gbm.sort_values(by='Importance', ascending=False).reset_index(drop=True)
-print("\nGBM - Feature Importance:")
+print("GBM - Feature Importance:")
 print(sorted_importance_df_gbm)
 
 # -----------------------
@@ -553,7 +553,7 @@ model_comparison = pd.DataFrame({
     'R_squared': [R_squared_rf, R_squared_xgb, R_squared_gbm]
 })
 
-print("\nModel Performance Comparison:")
+print("Model Performance Comparison:")
 print(model_comparison)
 
 # Create a bar plot for R-squared comparison
@@ -631,5 +631,3 @@ plt.close()
 
 # Stop the PDF device - this is crucial to save the PDF
 pdf_pages.close()
-
-print(f"\nAll plots, including the model comparison and actual vs predicted plots, have been saved to {pdf_filename} in your working directory.")

@@ -18,7 +18,7 @@ Some have done this study before. It is worth mentioning that the music industry
 
 2.1 METHODOLOGY
 
-I aim to use R for analysis, It is an extensive deep programing language thet is very nice for data analysis. It has great packages for analysis too, among them I will use: tidyverse, corplot, randomforest, xgboost caret among others for analysis. I intend to train three models XGBoost, randomforest and GBM for the regression analysis.
+I aim to use python for analysis, It is an extensive deep programing language thet is very nice for data analysis and programming. It has great packages for analysis too, among them I will use: seaborn, matplot_lib, , xgboost and scit-learnr among others for analysis. I intend to train three models XGBoost, randomforest and GBM for the regression analysis.
 
 2.2 DATA CLEANING
 
@@ -34,7 +34,7 @@ There after I removed all the columns I needed not to get a clean data for analy
 
 Having the clean Data set I went ahead and checked its properties, how the columns data is distributed. I pulled the data’s column; mean, median, mode and quadrant information.
 Afterwards I identified popularity as the dependent variable and all other numeric features as the independent variables.
-I went ahead and checked the features linear correlation with popularity. I found out from both the heat map and scatter plot matrix that popularity has very weak linear correlation with the features.
+I went ahead and checked the features linear correlation with popularity. I found out from both the heat map and scatter plots that popularity has very weak linear correlation with the features.
 I also performed both anova and linear regression of the features and popularity to check for feature importance, I discovered, all features had a p-value less than 0.05 bar key and danceability. But since they may have other non-linear relationship to popularity I kept the features.
 There I decided to explore advanced machine learning techniques to check for complex relations.
 
@@ -52,7 +52,7 @@ Here I also learnt that some features have high correlation to popularity eg mar
 There could be ways better employed to further reduce the RMSE. This will likely tighten the grip on the relationship between features and popularity, therefore rise the Rsquared. 
 
 
-All the results and plots in; “the regression codes and results.pdf”
+All the results and plots in; “the regression_results.pdf”
 
 
  
